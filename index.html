@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        
+        .home{
+            height: 110px;
+            width: 100%;
+            background-color:black;
+        }
+        .nav{
+            height: 120px;
+            width: 100%;
+            background-color: cadetblue;
+            border: 3px crimson solid;
+            position:fixed;
+            top: 0;
+            z-index: 100;
+            opacity: 0.5;
+            
+        }
+        .nav-items{
+            display: flex;
+            position: absolute;
+            right: 50px;
+            margin: 10px;
+            position: fixed;
+            z-index: 100;
+            /* padding: 50px; */
+          
+                }
+        .nav-items a{
+            text-decoration: none;
+            margin: 30px;
+            font-size: 40px;
+            /* border: 3px blanchedalmond solid; */
+            font-style: italic;
+            text-shadow: 2px 2px 2px  black ;
+            
+        }
+        .nav-items a:hover{
+            scale: 1.5;
+        }
+        
+        .carousel-inner img{
+            position: relative;
+            /* left: 250px; */
+            /* top: 100px; */
+            margin: 150px;
+            margin-left: 100px;
+            margin-right: 100px;
+            right: 50px;
+            /* left: 100px; */
+            /* right: 100px; */
+             
+        }
+        .carousel-control-prev-icon{
+            position: relative;
+            /* top: 110px; */
+        }
+        .carousel-control-next-icon{
+            position: relative;
+            /* top: 110px; */
+
+        }
+        .sliding{
+            background-color: black;
+        }
+        #about{
+            height: 100vh;
+            width: 100%;
+            background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50px;
+        }
+        #about h1{
+            background-color: darkseagreen;
+            position: relative;
+            left: 700px;
+            width: 700px;
+            font-size: 50px;
+        }
+        
+        
+        .line h5{
+            position: relative;
+            top: 450px;
+            left: 800px;
+            color: brown;
+
+        }
+        .para{
+            height: 400px;
+            width: 800px;
+            background-color: aqua;
+            position: relative;
+            left: 550px;
+            top: 50px;
+            border-radius: 50%;
+        }
+        .para h2{
+            position: relative;
+            top: 20px;
+            left: 250px;
+            color: crimson;
+        }
+        .para p{
+            position: relative;
+            left: 70px;
+            top: 40px;
+            width: 650px;
+            font-weight: 500;
+        }
+        #service{
+            height: 100vh;
+            width: 2000px;
+            position: relative;
+            top: 300px;
+            display:flex;
+        }
+        
+        
+        .dell1{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            margin-left: 20px;
+            
+        }
+        .d1 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell2{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+            
+        }
+        .d2 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell3{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+
+        }
+        .d3 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell4{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+        }
+        .d4 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell5{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+        }
+        .d5 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+    #service1{
+        height: 100vh;
+            width: 2000px;
+            position: relative;
+            top: 300px;
+            display:flex;
+            top: -80px;
+        
+    }
+    .dell6{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            margin-left: 20px;
+            
+        }
+        .d11 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell7{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+            
+        }
+        .d12 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell8{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+
+        }
+        .d13 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell9{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+        }
+        .d14 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .dell10{
+            height: 600px;
+            width: 370px;
+            border: 3px black solid;
+            position: relative;
+            top: 150px;
+            /* margin: 10px; */
+        }
+        .d15 img:hover{
+            scale: 1.2;
+            transition: all 3s ease;
+        }
+        .contact{
+            height: 100vh;
+            width: 100%;
+
+        }
+        .contact h1{
+            position: relative;
+            top: 150px;
+            left: 900px;
+            color: brown;
+        }
+        
+    footer{
+      height: 500px;
+      width: 100%;
+      /* display: inline-block; */
+    }
+    .company{
+      height: 40px;
+      width: 100px;
+      color: whitesmoke;
+      display: inline-block;
+      position: relative;
+      left: 100px;
+    
+    }.company:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }.content{
+      height: 40px;
+      width: 150px;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 300px;
+      margin: 50px;
+    
+    }
+    .content:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }
+    .help{
+      height: 40px;
+      width: 100px;
+      color: whitesmoke;
+      display: inline-block;
+      position: relative;
+      left: 560px; 
+      display: inline;
+      text-decoration: none;
+    }
+    .help .nh1{
+      position: relative;
+      left: 350px;
+      top: -30px;
+      text-decoration: none;
+    }
+    .help .nh2{
+      position: relative;
+      left: 350px;
+      text-decoration: none;
+    }
+    .help:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }
+    .contact{
+      height: 40px;
+      width: 120px;
+      color: whitesmoke;
+      /* display: inline-block; */
+      position: relative;
+      left: 1400px;
+      /* right: 200px; */
+      /* right: 600px; */
+    }
+    .contact:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+
+    }
+    .lang{
+      position: relative;
+      left: 470px;
+      color: bisque;
+      top:-130px;
+    }
+    .lang1{
+      position: relative;
+      padding: 5px;
+      top: 25px;
+      padding: 5px;
+    }
+    .lang2{
+      position: relative;
+      top: -50px;
+    }
+    .rights{
+      position: relative;
+      right: 370px;
+      top: 100px;
+    }
+    .about a{
+      position: relative;
+      left: 100px;
+      top: -90px;
+    }
+    .careers{
+      position: relative;
+      left: 100px;
+      top: -90px;
+      text-decoration: none;
+    }
+    #foot{
+        background-color: black;
+        height: 70vh;
+        width: 100%;
+    }
+        
+        
+
+    </style>
+</head>
+<body>
+   <div class="home" id="homee">
+    <nav class="nav">
+        <img src="icon.jpg" alt="" height="120px" width="200px">
+        </nav>
+        <div class="nav-items">
+            <a href="#carouselExampleAutoplaying">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Services</a>
+            <a href="#foot">Contact</a>
+
+        </div>
+        </div>
+
+
+    
+    
+    <!-- home page starts -->
+    <div class="sliding">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="slide11.webp" class="d-block w-100" alt="..." height="500px" width="40%">
+          </div>
+          <div class="carousel-item">
+            <img src="slide2.jpg" class="d-block w-100" alt="..." height="500px" width="40%">
+          </div>
+          <div class="carousel-item">
+            <img src="slide4.webp" class="d-block w-100" alt="..." height="500px" width="60%">
+          </div>
+          <div class="carousel-item">
+            <img src="slide5.png" class="d-block w-100" alt="..." height="500px" width="60%">
+          </div>
+          <div class="carousel-item">
+            <img src="slide6.jpg" class="d-block w-100" alt="..." height="500px" width="60%">
+          </div>
+    
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+      <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+      
+
+    <!-- home page ends -->
+    <!-- about starts -->
+    <div id="about">
+        <!-- <h1>ABOUT DELL TECHNOLOGIES</h1> -->
+        <div class="para">
+            <h2>WHO WE ARE.......&hearts;</h2>
+            <p justify="center">We are a diverse team with unique United in our purpose, our strategy and our culture. Driven by our ambition and the power of technology to drive human progress.  Unwavering in our commitment to equality, trust and advocacy for one another.
+            DXC and Dell Technologies help customers drive growth by dramatically improving their ability to anticipate and respond to change. We work collaboratively with your team to develop powerful transformational strategies, apply industry-recognized innovations and manage foundational technologies. DXC is a Titanium Black Partner...........
+            </p>
+
+        </div>
+
+    </div>
+    <!-- about ends -->
+    <!-- service starts -->
+    <div class="line"><h5>DELL AMAZING SERVICES</h5></div>
+    <div id="service">
+        
+        <div class="dell1">
+            <div class="d1">
+                <img src="dell1.jpg" alt="" height="300px" width="370px">
+                <p content="justify">cost ₹90,990/Dell Inspiron n7567 7th Gen Core i5 4GB Ram 15.6" FHD Gaming Laptop
+                    ৳91,500.00 BDT*· Brand: Dell
+                    Dell Inspiron n7567 7th Gen i5 Gaming Laptop with Gtx1050 Graphics Intel Core i5-7300HQ Processor (6M Cache,2.50 GHz up to 3.50 GHz) 4 GB DDR4 RAM 1TB</p>
+
+            </div>
+        </div>
+        <div class="dell2">
+            <div class="d2">
+                <img src="dell2.avif" alt="" height="300px" width="370px" >
+                <p content="justify">The Dell G15-5515 gaming laptop is designed to be your ideal companion, allowing you to work, game and create anywhere. The laptop starts at a price of Rs. 1,14,990 and has a one year warrant.This Laptop is equipped with Windows 11 Home (64-bit) OS and comes with the warranty of 1 Year</p>
+
+            </div>
+
+        </div>
+        <div class="dell3">
+            <div class="d3">
+                <img src="dell33.jpg" alt="" height="300px" width="370px">
+                <p  content="justify"> cost ₹81,990 ,Dell Inspiron 7420 2in1 Laptop, Intel i5-1235U, 16GB DDR4, 512GB SSD, Integrated, 14.0" (35.56Cms) FHD+ WVA Truelife Touch 250 nits Active Pen, Win 11+ MSO'21, 15 Month McAfee, Platinum Silver, 1.5KgsDell New G15-5515 Gaming Laptop (Ryzen 7 5800h) comes with AMD Ryzen 7 Processor and 3.2 GHz, Octa Core Turbo Boost Upto 4.4 GHz speed. This Model comes up with 16 GB DDR4 of RAM and 512 GB of hard disk.</p>
+            </div>
+
+        </div>
+        <div class="dell4">
+            <div class="d4">
+                <img src="dell4.jpg" alt="" height="300px" width="370px">
+                <p content="justify"> cost ₹1,24,990 Asus ROG Strix G15 Advantage Edition AMD Ryzen 9 5980HX 15.6 Inches Gaming Laptop (16GB/1TB SSD/Windows 11/Black/2.5 KG)Dell New G15-5515 Gaming Laptop (Ryzen 7 5800h) has a screen size of 15.6 Inches and weighs approximately 2.57 kg. This Windows 11 Home (64-bit) laptop has decent resolution of 1920 x 1080 Pixels.</p>
+
+            </div>
+
+        </div>
+        <div class="dell5">
+            <div class="d5">
+                <img src="dell5.jpg" alt=""  height="300px" width="370px">
+                <p content="justify"> cost $2,219.00*Dell Alienware X15 R2 Laptop 15.6" QHD i9 GeForce RTX 3080 2x1TB SSD 32GB W11H
+                    In terms of connectivity, this model has Headphone Jack, Microphone In, WiFi, Inbuilt Microphone, Speakers, Touchpad. Dell New G15-5515 Gaming Laptop (Ryzen 7 5800h) comes with Full HD WVA AG 300 nits 165Hz Narrow Border.
+                </p>
+
+            </div>
+             
+        </div>
+
+    </div>
+    <!-- service second row -->
+    <div id="service1">
+        
+        <div class="dell6">
+            <div class="d11">
+                <img src="dell6.avif" alt="" height="300px" width="370px">
+                <p content="justify">cost ₹74,680/ 12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo)
+                    15.6", FHD 1920x1080, 120Hz, WVA, Non-Touch, Anti-Glare, 250 nit, Narrow Border, LED-Backlit
+                </p>
+
+            </div>
+        </div>
+        <div class="dell7">
+            <div class="d12">
+                <img src="dell7.jpg" alt="" height="300px" width="370px" >
+                <p content="justify"> cost  ₹77,190/ Dell New G15-5515 Gaming Laptop, AMD Ryzen5-5600H, Win 11 + MSO'21, 16Gb Gddr4, 512Gb SSD, Nvidia RTX 3050 (4Gb Gddr6), 15.6" (39.62Cms) FHD AG 250 Nits 120Hz, Backlit KB Orange, 2.57Kgs</p>
+
+            </div>
+
+        </div>
+        <div class="dell8">
+            <div class="d13">
+                <img src="dell8.avif" alt="" height="300px" width="370px">
+                <p  content="justify"> cost ₹81,990 AMD Ryzen™ 5 7520U Processors with Radeon™ Graphics.15.6", FHD 1920x1080, 120Hz, WVA, Non-Touch, Anti-Glare, 250 nit, Narrow Border, LED-Backlit.8 GB, LPDDR5, 5500 MHz, integrated</p>
+            </div>
+
+        </div>
+        <div class="dell9">
+            <div class="d14">
+                <img src="dell9.avif" alt="" height="300px" width="370px">
+                <p content="justify"> cost ₹1,24,990 Processor
+                    12th Gen Intel® Core™ i5-12500H (18 MB cache, 12 cores, 16 threads, up to 4.50 GHz Turbo).
+                    1 headset (headphone and microphone combo) port
+                    Stereo speakers with Realtek ALC3254, 2 W x 2.5 W
+                    Dual-array microphones.15.6", FHD 1920x1080, 120Hz, WVA, Non-Touch, Anti-Glare, 250 nit, Narrow Border, LED-Backlit</p>
+
+            </div>
+
+        </div>
+        <div class="dell10">
+            <div class="d15">
+                <img src="dell10.webp" alt=""  height="300px" width="370px">
+                <p content="justify"> cost $96,000/ Dell G15 Gaming Laptop (AMD Ryzen 5 5600H 6-Core, 15.6" 120Hz Full HD (1920x1080), NVIDIA RTX 3050, 64GB RAM, 4TB PCIe SSD, Backlit KB, Wifi, USB 3.2, HDMI, Webcam, Win 11 Pro) with D6000 Dock.15.6", FHD 1920x1080, 165Hz, Non-Touch, AG, WVA, LED-Backlit, 300 nit, Narrow Border.
+                    
+                </p>
+
+            </div>
+             
+        </div>
+
+    </div>
+
+
+    <!-- contacts starts -->
+   
+        <h1 style="color: crimson; position: relative; left: 760px;" >CONTACT US</h1>
+        <footer id="foot">
+            <div class="company"> COMPANY </div>
+              <div class="content">VIEW CONTENT IN</div>
+              <div class="help"> NEED HELP?
+                <div class="nh1"><a href="https://www.dell.com/en-in">VISIT HELP CENTER</a></div>
+                <div class="nh2"><a href="https://www.dell.com/en-in">SHARE FEEDBACK</a></div>
+              </div>
+            
+             <div class="about"><a href="https://www.dell.com/en-in">ABOUT US</a></div>
+             <div class="careers"><a href="https://www.dell.com/en-in">CAREERS</a></div>
+             <div class="lang"><p> ENGLISH </p>
+             <div class="lang1" >HINDI</div>
+             <div class="lang2">TELUGU</div>
+             <div class="rights"> <a href="https://www.dell.com/en-in">&copy;2023 STAR.All Rights Reserved <br>Terms Of Use Privacy  Policy FAQ</a></div>
+             </div>
+          
+          </footer>
+
+
+        
+    </div>
+
+    <!-- contacts ends -->
+</body>
+</html>
